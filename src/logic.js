@@ -45,6 +45,31 @@ function move(gameState) {
   const boardHeight = gameState.board.height;
   console.log(myHead);
 
+  if (myHead.y === boardHeight - 1) {
+    possibleMoves.left = true;
+    possibleMoves.right = true;
+    possibleMoves.down = true;
+    possibleMoves.up = false;
+  }
+  if (myHead.y === 0) {
+    possibleMoves.left = true;
+    possibleMoves.right = true;
+    possibleMoves.down = false;
+    possibleMoves.up = true;
+  }
+  if (myHead.x === 0) {
+    possibleMoves.left = false;
+    possibleMoves.right = true;
+    possibleMoves.down = true;
+    possibleMoves.up = true;
+  }
+  if (myHead.y === boardWidth - 1) {
+    possibleMoves.left = true;
+    possibleMoves.right = false;
+    possibleMoves.down = true;
+    possibleMoves.up = true;
+  }
+
   // TODO: Step 2 - Don't hit yourself.
   // Use information in gameState to prevent your Battlesnake from colliding with itself.
   // const mybody = gameState.you.body
