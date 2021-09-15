@@ -53,7 +53,7 @@ function move(gameState) {
   if (myHead.x === 0) {
     possibleMoves.left = false;
   }
-  if (myHead.y === boardWidth - 1) {
+  if (myHead.x === boardWidth - 1) {
     possibleMoves.right = false;
   }
 
