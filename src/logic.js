@@ -44,6 +44,7 @@ function move(gameState) {
   const boardWidth = gameState.board.width;
   const boardHeight = gameState.board.height;
   console.log(myHead);
+  console.log(possibleMoves);
 
   if (myHead.y === boardHeight - 1) {
     possibleMoves.left = true;
